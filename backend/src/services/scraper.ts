@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import type { AnyNode } from "domhandler";
 
 const WIKI_URL = "https://satisfactory.wiki.gg/wiki/Recipes";
 
@@ -23,7 +24,7 @@ function slugify(name: string): string {
   return name.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_]/g, "");
 }
 
-function parseItems(cell: cheerio.Cheerio<cheerio.Element>, $: cheerio.CheerioAPI): RecipeItem[] {
+function parseItems(cell: cheerio.Cheerio<AnyNode>, $: cheerio.CheerioAPI): RecipeItem[] {
   const items: RecipeItem[] = [];
 
   cell.find(".recipe-item").each((_i, el) => {

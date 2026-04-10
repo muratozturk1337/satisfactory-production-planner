@@ -1,10 +1,15 @@
 # Dependencies
 node_modules/
+backend/dist/
 
 # Environment variables — commit only .env.example
 .env
 .env.*
 !.env.example
+
+# Local agent tooling
+.agent-instructions/
+.claude/
 
 # Editor
 .vscode/
