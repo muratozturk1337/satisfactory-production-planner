@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Environment variables — commit only .env.example
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
